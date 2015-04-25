@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app='theApp'>
+<head>
+  <meta charset="UTF-8">
+  <title>MST4K</title>
+  <link rel="stylesheet" href="./css/index.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+    <div id='movieHolder' ng-controller="videoController">
+      <div id='movieInnerHolder'>
+      <video id="movie" preload="auto" src="" controls></video>
+    </div>
+  </div>
+  <div id="chatHolder" ng-controller="chatController">
+    <div id="chatInnerHolder">
+      <span id="chatTitle">Chat Room</span>
+
+        <div id="messagesHolder" >
+          <div class='messageBox group' ng-repeat="message in messages">
+            <div class='messageName'>{{ message.name }}</div>
+            <div class="messageText">{{ message.text }}</div>
+          </div>
+        </div>
+      <form ng-show="name" ng-submit="sendMessage(input)">
+        <textarea type="input" ng-model="input" columns="40" rows="4"></textarea>
+        <button ng-click="sendMessage(input)">Send Message</button>
+      </form>
+
+        <input ng-hide="name" type="text" ng-model="nameInput" size="24" placeholder="Your Username">
+        <button ng-hide="name" ng-click="changeName(nameInput)">Create Username</button>
+
+    </div>
+  </div>
+
+  <script src="./js/index.js"></script>
+  <script src="./js/services.js"></script>
+  <script src="./js/controllers/chat.js"></script>
+  <script src="./js/controllers/video.js"></script>
+  <script src="./js/controllers/videoAdmin.js"></script>
+</body>
+</html>

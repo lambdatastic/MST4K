@@ -1,0 +1,227 @@
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+}
+.group:after {
+  clear: both;
+}
+.group {
+  clear: both;
+  *zoom: 1;
+}
+
+body{
+  font-size: 16px;
+  font-size: 1.3vw;
+  position: relative;
+  line-height: 1.38em;
+  font-family: "helvetica", helvetica;
+  font-weight: normal;
+  background-color: #444444;
+  color: #cbcbcb;
+}
+form{
+  padding: 1%;
+
+}
+textarea{
+  box-sizing: border-box;
+  width: 100%;
+  padding: 2%;
+  resize: none;
+}
+#header{
+  width: 100%;
+  margin: 4px;
+  padding: 4px;
+
+}
+.title{
+
+}
+#movieHolder{
+  display: relative;
+  float: left;
+  width: 60%;
+ background-color: #343434;
+}
+#movieInnerHolder{
+  width: 90%;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  display: block
+}
+video{
+   position: relative;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    background-size: cover;
+    overflow: hidden;
+}
+#chatHolder{
+  display: inline-block;
+  position: fixed;
+  width:40%;
+  background-color: #444444;
+  height: 100%;
+  max-height: 100%
+  bottom: 0px;
+  margin-bottom:10%;
+}
+
+#chatInnerHolder{
+  box-sizing: border-box;
+  display: block;
+  height: 100%;
+  padding: 2%;
+}
+#chatTitle{
+
+}
+#messagesHolder{
+  display: block;
+  overflow-y: scroll;
+  max-height: 80%;
+  overflow:scroll;
+  background-color: #303030;
+  padding: 2px;
+  border: 1px solid #efefef;
+}
+.messageBox{
+  position: static;
+  display: block;
+  border: 1px solid black;
+  width: 100%;
+  height: 100%;
+  margin: 2px;
+  padding: 2px;
+  padding-bottom: .3em;
+}
+.messageName{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+  width: 20%;
+  float:left;
+
+}
+.messageText{
+  display: inline-block;
+  float: right;
+  width:75%;
+}
+
+input, textarea{
+  font-size: 16px;
+  font-size: 1.3vw;
+  position: relative;
+  line-height: 1.38em;
+  font-family: "helvetica", helvetica;
+  font-weight: normal;
+  background-color: #222222;
+  color: #cbcbcb;
+}
+
+button{
+  font-size: 16px;
+  font-size: 1.3vw;
+  position: relative;
+  line-height: 1.38em;
+  font-family: "helvetica", helvetica;
+  font-weight: normal;
+  background-color: #222222;
+  color: #cbcbcb;
+}
+
+
+
+@media screen and (max-width: 1080px){
+
+  body{
+    font-size: 16px;
+    font-size: 2.0vw;
+  }
+  #movieHolder{
+    float: none;
+    width: 100%;
+
+  }
+  #chatHolder{
+    bottom:0px;
+    margin-bottom:15%;
+    float: none;
+    width: 100%;
+    height: 50%;
+  }
+.messageName{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+  width: 15%;
+  float:left;
+
+}
+.messageText{
+  display: inline-block;
+  float: right;
+  width:82%;
+}
+
+}
