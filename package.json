@@ -1,0 +1,11 @@
+{
+  "name": "MST4K",
+  "version": "1.0.0",
+  "description": "A server package for serving up synced video in a browser with chat",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Cassandra Cruz",
+  "license": "ISC"
+}
