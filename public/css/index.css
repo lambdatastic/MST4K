@@ -70,6 +70,8 @@ body{
   font-weight: normal;
   background-color: #444444;
   color: #cbcbcb;
+  height: 100%;
+  width:100%;
 }
 form{
   padding: 1%;
@@ -94,17 +96,19 @@ textarea{
   display: relative;
   float: left;
   width: 60%;
+  height: 50%;
  background-color: #343434;
 }
 #movieInnerHolder{
-  width: 90%;
+  width: 94%;
+  height: 50%;
   position: relative;
   margin-left: auto;
   margin-right: auto;
   display: block
 }
 video{
-  width: 100%;
+  object-fit: contain;
 }
 #chatHolder{
   display: inline-block;

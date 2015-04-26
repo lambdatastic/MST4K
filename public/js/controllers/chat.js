@@ -21,12 +21,12 @@ angular.module('chat', [])
     setTimeout(function(){
       document.getElementById('messagesHolder').scrollTop = 9999999;
     }, 110);
-    
+
   }
 
-  for(var i = 0; i < 50; i++){
-    $scope.messages.push({name:"someName", text: "this is a message from PHMessages. It's very very long to ensure that Cooper can see what line wrapping is doing inside of the index.html"});
-  }
+  // for(var i = 0; i < 50; i++){
+  //   $scope.messages.push({name:"someName", text: "this is a message from PHMessages. It's very very long to ensure that Cooper can see what line wrapping is doing inside of the index.html"});
+  // }
 
   socket.on('message', function (message) {
     $scope.messages.push(message);
