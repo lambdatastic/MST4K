@@ -15,22 +15,26 @@
   </div>
   <div id="chatHolder" ng-controller="chatController">
     <div id="chatInnerHolder">
-      <span id="chatTitle">Chat Room</span>
-
+      <div id="chatTitle">Chat Room</div>
         <div id="messagesHolder" >
           <div ng-model="messages" class='messageBox group' ng-repeat="message in messages" ng-change="scrollMessages()">
             <div class='messageName'>{{ message.name }}</div>
+            <div class='messageDivider'></div>
             <div class="messageText">{{ message.text }}</div>
           </div>
         </div>
+       <div id="textEntryArea">
       <form ng-show="name" >
-        <textarea id="messageArea" ng-keypress="isThisTheEnterKey($event)" type="input" ng-model="input" columns="40" rows="2"></textarea>
-        <button ng-click="sendMessage(input)">Send Message</button>
+        <div id="messageSubmit">
+        <textarea id="messageTextarea" ng-keypress="isThisTheEnterKey($event)" type="input" ng-model="input" columns="40" rows="2"></textarea>
+        <div id="messageButton" class="button" ng-click="sendMessage(input)">SEND</div>
       </form>
-
-        <input ng-hide="name" type="text" ng-model="nameInput" size="24" placeholder="Your Username">
-        <button ng-hide="name" ng-click="changeName(nameInput)">Create Username</button>
-
+    </div>
+      <div ng-hide="name" id="usernameSubmit">
+        <input id="usernameInput" type="text" ng-model="nameInput" size="24" placeholder=" - Enter a Nickname">
+        <div id='usernameButton' class="button" ng-click="changeName(nameInput)">CREATE</div>
+      </div>
+      </div>
     </div>
   </div>
 

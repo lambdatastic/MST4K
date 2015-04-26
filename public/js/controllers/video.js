@@ -12,8 +12,8 @@ angular.module('video', [])
 
   socket.on('movie:sync', function(data) {
     var current = $scope.video.currentTime;
-    if (Math.abs(data-current) > 5) {
-      $scope.video.fastSeek(data);
+    if (Math.abs(data - current) > 5) {
+      $scope.video.currentTime = data;
     }
 
     // TODO: Make client option to ignore server sync
