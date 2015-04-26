@@ -3,11 +3,11 @@ var express = require('express');
 var app = express();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
-var vidStreamer = require('vid-streamer');
+// var vidStreamer = require('vid-streamer');
 
 // Define main route
 app.use(express.static(__dirname + '/public'));
-app.get('/videos/', vidStreamer);
+// app.get('/videos/', vidStreamer);
 
 io.on('connection', function(socket) {
   socket.on('message', function(data) {
