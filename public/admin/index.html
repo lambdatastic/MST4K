@@ -3,19 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <title>MST4K</title>
-  <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="../css/index.css">
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
   <script src="/socket.io/socket.io.js"></script>
 </head>
 <body>
-    <div id='movieHolder' ng-controller="videoAdminController">
+    <div id='movieHolder' ng-controller="videoController">
       <div id='movieInnerHolder'>
       <video id="movie" preload="auto" src="" controls></video>
     </div>
   </div>
   <div id="chatHolder" ng-controller="chatController">
     <div id="chatInnerHolder">
-      <span id="chatTitle">Chat Room</span>
+      <span id="chatTitle">Admin Page</span>
 
         <div id="messagesHolder" >
           <div ng-model="messages" class='messageBox group' ng-repeat="message in messages" ng-change="scrollMessages()">
@@ -34,11 +34,11 @@
     </div>
   </div>
 
-  <script src="./js/index.js"></script>
-  <script src="./js/services.js"></script>
-  <script src="./js/controllers/chat.js"></script>
-  <script src="./js/controllers/video.js"></script>
-  <script src="./js/controllers/videoAdmin.js"></script>
+  <script src="../js/index.js"></script>
+  <script src="../js/services.js"></script>
+  <script src="../js/controllers/chat.js"></script>
+  <script src="../js/controllers/video.js"></script>
+  <script src="../js/controllers/videoAdmin.js"></script>
 
   <script>
 

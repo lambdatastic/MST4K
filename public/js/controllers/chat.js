@@ -3,14 +3,35 @@ angular.module('chat', [])
 
   // Socket listeners
   // ================
+  $scope.isThisTheEnterKey = function(e){
+    if(e.keyCode === 13){
+      $scope.sendMessage();
+    }
+  }
+
   $scope.name;
   $scope.messages = $scope.messages || [];
+
+  $scope.$watchCollection('messages', function() {
+    console.log("change observed");
+    $scope.scrollMessages();
+  });
+
+  $scope.scrollMessages = function(){
+    setTimeout(function(){
+      document.getElementById('messagesHolder').scrollTop = 9999999;
+    }, 110);
+    
+  }
+
   for(var i = 0; i < 50; i++){
     $scope.messages.push({name:"someName", text: "this is a message from PHMessages. It's very very long to ensure that Cooper can see what line wrapping is doing inside of the index.html"});
   }
 
   socket.on('message', function (message) {
     $scope.messages.push(message);
+    // $scope.scrollMessages();
+    console.log(messages.length);
   });
 
   // Methods published to the scope
@@ -34,5 +55,6 @@ angular.module('chat', [])
 
     // clear message box
     $scope.input = '';
+
   };
 });

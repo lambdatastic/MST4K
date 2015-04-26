@@ -104,16 +104,7 @@ textarea{
   display: block
 }
 video{
-   position: relative;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -100;
-    background-size: cover;
-    overflow: hidden;
+  width: 100%;
 }
 #chatHolder{
   display: inline-block;
@@ -190,7 +181,19 @@ button{
   color: #cbcbcb;
 }
 
+@media screen and (max-width: 1080px){
 
+  body{
+    font-size: 16px;
+    font-size: 2.0vw;
+  }
+  #movieHolder{
+ 
+  }
+  #chatHolder{
+  
+  }
+}
 
 @media screen and (max-width: 1080px){
 
