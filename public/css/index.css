@@ -181,21 +181,25 @@ button{
   color: #cbcbcb;
 }
 
-@media screen and (max-width: 1080px){
+@media screen and (max-width: 1200px){
 
   body{
-    font-size: 16px;
-    font-size: 2.0vw;
+    font-size: 14px;
+    font-size: 1.6vw;
   }
-  #movieHolder{
- 
-  }
-  #chatHolder{
-  
-  }
+
 }
 
-@media screen and (max-width: 1080px){
+@media screen and (max-width: 1600px){
+
+  body{
+    font-size: 12px;
+    font-size: 1.4vw;
+  }
+
+}
+
+@media screen and (max-width: 800px){
 
   body{
     font-size: 16px;
